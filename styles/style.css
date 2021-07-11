@@ -1,0 +1,18 @@
+.grid{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid black 1px;
+}
+.grid div{
+    width: 10px;
+    height: 10px;
+}
+.snake{
+    background-color: blue;
+
+}
+.appel{
+    background-color: red;
+}
