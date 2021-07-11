@@ -1,18 +1,18 @@
-.grid{
-    width: 400px;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    border: solid black 1px;
-}
-.grid div{
-    width: 10px;
-    height: 10px;
-}
-.snake{
-    background-color: blue;
+.snake__screen{
+    background-color: #ccc;
+    width: 50vmin;
+    height: 50vmin;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
 
 }
-.appel{
+.snake{
+    background-color: rgb(9, 121, 5);
+    border: .25vmin solid black;
+}
+.food{
     background-color: red;
+    border: .25vmin solid black;
+
 }
