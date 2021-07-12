@@ -1,6 +1,9 @@
 import {hitSnake, expandSnake} from './snake.js'
 import {randomGridPosition} from './grid.js'
 
+let scoreDisplay = document.getElementById('score-snake')
+let score = 0
+
 let food = randomGridPosition()
 const expansion = 1
 
@@ -8,6 +11,8 @@ export function update(){
     if(hitSnake(food)){
         expandSnake(expansion)
         food = getRandomFood()
+        score ++
+        scoreDisplay.textContent = score
     }
 }
   
