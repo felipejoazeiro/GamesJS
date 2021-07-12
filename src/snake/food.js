@@ -1,10 +1,13 @@
-let food = {x:10,y:1}
+import {hitSnake, expandSnake} from './snake.js'
+import {randomGridPosition} from './grid.js'
+
+let food = randomGridPosition()
 const expansion = 1
 
 export function update(){
     if(hitSnake(food)){
         expandSnake(expansion)
-        food = {x:20, y:10}
+        food = getRandomFood()
     }
 }
   
@@ -15,4 +18,12 @@ export function draw(gameBoard){
     foodElement.classList.add('food')
     gameBoard.appendChild(foodElement)
 
+}
+
+function getRandomFood(){
+    let newFoodPosition
+    while (newFoodPosition == null ||  hitSnake(newFoodPosition)){
+        newFoodPosition = randomGridPosition()
+    }
+    return newFoodPosition
 }
